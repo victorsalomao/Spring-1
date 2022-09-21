@@ -1,6 +1,17 @@
 package com.victordev.userdept.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_department")
 public class Department {
+
+    @Id //to incrementando no banco de dados o ID do departamento
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
